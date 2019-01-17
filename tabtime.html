@@ -74,7 +74,7 @@ table {
 <style>
 
 #inventors {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-family: "Arial", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 50%;
   margin: auto;
@@ -93,7 +93,7 @@ table {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #4CAF50;
+  background-color: #345fe2;
   color: white;
 }
 
@@ -126,11 +126,9 @@ table {
 function buildmyTable() {
   var inventors = [{name:"Tim Berners-Lee",invention:"WWW & HTML"},{name:"Haken Wium Lie",invention:"CSS"},{name:"Brendan Eich",invention:"Javascript"}];
 
-  // build a string variable with all the table code and data
   var mytable = "<table border='1'>";
   mytable = mytable + "<th>Inventor</th><th>Invention</th>";
 
-  // loop through data table to add data
   for (i = 0; i < inventors.length; i = i + 1) {
     mytable = mytable + "<tr>";
     mytable = mytable + "<td>" + inventors[i].name + "</td><td>" + inventors[i].invention + "</td>";
