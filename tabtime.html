@@ -53,16 +53,16 @@ table {
 
 <img src="https://www.google.com/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwiKhNTs0_PfAhWb_YMKHc0lD2kQjRx6BAgBEAU&url=https%3A%2F%2Fwww.cnet.com%2Fpictures%2Fimages-berners-lee-and-the-dawn-of-the-web%2F&psig=AOvVaw3zcZ8AFqGDWB54LJfqoTLb&ust=1547774432774114" width="600px" height="400px">
 <br>
-<table border="1" style="font-family: arial" width = "50%">
-  <th style="background-color: #ffffff">Inventor</th><th style="background-color: #ffffff">Technology</th>
+<table border="1">
+  <th>Inventer</th><th>Technology</th>
   <tr>
-     <td style="background-color: #ffffff">Tim Berners-Lee</td><td style="background-color: #ffffff">WWW & HTML</td>
+     <td>Tim Berners-Lee</td><td>WWW & HTML</td>
   </tr>
   <tr>
-     <td style="background-color: #ffffff">Håkon Wium Lie</td><td style="background-color: #ffffff">CSS</td>
+     <td>Håkon Wium Lie</td><td>CSS</td>
   </tr>
   <tr>
-     <td style="background-color: #ffffff">Brenden Eich</td><td style="background-color: #ffffff">Javascript</td>
+     <td>Brenden Eich</td><td>Javascript</td>
   </tr>
 </table>
       <div id="middle"><a href="middle"></a></div>
@@ -74,9 +74,9 @@ table {
 <style>
 
 #inventors {
-  font-family: "Arial", Arial, Helvetica, sans-serif;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 50%;
+  width: 100%;
   margin: auto;
 }
 
@@ -93,25 +93,25 @@ table {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #345fe2;
+  background-color: #4CAF50;
   color: white;
 }
 
 </style>
 
-<table id="inventors" border="1" style="font-family:Fantasy">
+<table id="inventors" border="1">
   <th>Inventor</th><th>Technology</th>
   <tr>
      <td>Tim Berners-Lee</td><td>WWW & HTML</td>
   </tr>
   <tr>
-
-     <td style="background-color: burlywood">Håkon Wium Lie</td><td style="background-color: burlywood">CSS</td>
+     <td>Håkon Wium Lie</td><td>CSS</td>
   </tr>
   <tr>
      <td>Brenden Eich</td><td>Javascript</td>
   </tr>
 </table>
+
 <div id="bottom"><a href="bottom"></a></div>
 
 <h3 style="color: aliceblue">1995 - Brenden Eich</h3>
@@ -123,25 +123,27 @@ table {
 
 
 <script>
+
 function buildmyTable() {
+
   var inventors = [{name:"Tim Berners-Lee",invention:"WWW & HTML"},{name:"Haken Wium Lie",invention:"CSS"},{name:"Brendan Eich",invention:"Javascript"}];
 
+  // build a string variable with all the table code and data
   var mytable = "<table border='1'>";
   mytable = mytable + "<th>Inventor</th><th>Invention</th>";
 
+  // loop through data table to add data
   for (i = 0; i < inventors.length; i = i + 1) {
     mytable = mytable + "<tr>";
     mytable = mytable + "<td>" + inventors[i].name + "</td><td>" + inventors[i].invention + "</td>";
     mytable = mytable + "</tr>";
   }
+
   mytable = mytable + "</table>";
 
   // get the div and substitute mytable data for it
   var placetoprint = document.getElementById("printmytable");
   placetoprint.innerHTML = mytable;
-        document.getElementById("printmytable").style.width="100%";
-    document.getElementById("prentmytable").style.color="aliceblue";
-document.getElementById("printmytable").style.backgroundColor="#2f4f4f";
 
 }
 
@@ -154,43 +156,5 @@ buildmyTable()
                 }
         </style>
 
-<script>
-     
-dragElement(document.getElementById("mydiv"));
-
-function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    elmnt.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
-</script>
 
 </html>
