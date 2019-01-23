@@ -4,18 +4,18 @@
         style="border:1px solid #c3c3c3;">
       </canvas>
     <script>
-   var canvas = document.getElementById("myCanvas");
-   var ctx = canvas.getContext("2d");
-   ctx.rect(20, 20, 150, 100);
-   ctx.stroke();
-   ctx.beginPath();
-   ctx.arc(100, 75, 50, 0, 2 * Math.PI);
-   ctx.stroke();
-   var imageObj = new Image();
-   imageObj.onload = function() {
-   context.drawImage(imageObj, 69, 50);
-};
-      imageObj.src = 'http://photos1.blogger.com/blogger/2626/3290/1600/Borat-movie-08.jpg';
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var imageObj = new Image();
+    imageObj.onload = function() {
+    context.drawImage(imageObj, 69, 50);
+    };
+    imageObj.src = 'http://photos1.blogger.com/blogger/2626/3290/1600/Borat-movie-08.jpg';
+    ctx.rect(20, 20, 150, 100);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+    ctx.stroke();
     </script>  
   </body>
 </html>
