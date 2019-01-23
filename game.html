@@ -59,7 +59,7 @@ function clear() {
 function init() {
 	canvas = document.getElementById("canvas");
 	ctx = canvas.getContext("2d");
-	return setInterval(draw, 10); // this is key, tells draw function to fire 10x per second
+	return setInterval(draw, 20); // this is key, tells draw function to fire 10x per second
 }
 
 function doKeyDown(evt){
@@ -93,7 +93,7 @@ function draw() {
 	ctx.strokeStyle = "black";
 	rect(0,0,WIDTH,HEIGHT);
 	ctx.fillStyle = "purple";
-	circle(x, y, 10);
+	make_base();
 }
 
 // Main part of program
