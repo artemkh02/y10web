@@ -2,8 +2,11 @@
   <script>
    var canvas = document.getElementById("myCanvas");
    var ctx = canvas.getContext("2d");
-   ctx.fillStyle = "#FF0000";
-   ctx.fillRect(0, 0, 150, 75);
+   ctx.rect(20, 20, 150, 100);
+   ctx.stroke();
+   ctx.beginPath();
+   ctx.arc(100, 75, 50, 0, 2 * Math.PI);
+   ctx.stroke();
   </script>
 </html>
 
