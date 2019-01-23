@@ -1,27 +1,22 @@
 <html>
   <body>
-    <canvas id="myCanvas" width="1440" height="900"
-    style="border:1px solid #c3c3c3;">
-    </canvas>
-  <script>
+      <canvas id="myCanvas" width="1440" height="900"
+        style="border:1px solid #c3c3c3;">
+      </canvas>
+    <script>
    var canvas = document.getElementById("myCanvas");
    var ctx = canvas.getContext("2d");
    ctx.rect(20, 20, 150, 100);
    ctx.stroke();
-  </script>
-    <script>
-      ctx.beginPath();
+   ctx.beginPath();
    ctx.arc(100, 75, 50, 0, 2 * Math.PI);
    ctx.stroke();
-    </script>
-    <script>
-       window.onload = function() {
-   var canvas = document.getElementById("myCanvas");
-   var ctx = canvas.getContext("2d");
-   var img = document.getElementById('foo').innerHTML = '<img src = "http://photos1.blogger.com/blogger/2626/3290/1600/Borat-movie-08.jpg">';
-   ctx.drawImage(img, 445, 668);
+   var imageObj = new Image();
+   imageObj.onload = function() {
+   context.drawImage(imageObj, 69, 50);
 };
-    </script>
-    </body>
+      imageObj.src = 'http://photos1.blogger.com/blogger/2626/3290/1600/Borat-movie-08.jpg';
+    </script>  
+  </body>
 </html>
 
